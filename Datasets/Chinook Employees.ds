@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?><dataset draft="false"><queries><query id="4d59c8da-bfec-4397-bf05-3745ee88bbb6" data-source="mysql8-193e0d213f4-144da3e257729941" queryText="SELECT * FROM Chinook.Employee e
+LIMIT 0, 200" catalog="mydb"/></queries></dataset>
