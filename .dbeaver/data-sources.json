@@ -44,6 +44,24 @@
 					"autocommit": true
 				}
 			}
+		},
+		"postgres-jdbc-193e5722e0a-4dabc4f886d6e7a5": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "PostgreSQL@192.168.1.19",
+			"configuration": {
+				"host": "192.168.1.19",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://192.168.1.19:5432/postgres",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native",
+				"bootstrap": {
+					"autocommit": true
+				}
+			}
 		}
 	},
 	"connection-types": {
