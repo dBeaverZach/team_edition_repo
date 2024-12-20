@@ -1,0 +1,1 @@
+select * from postgres.public.financial_data_pg fdp;
