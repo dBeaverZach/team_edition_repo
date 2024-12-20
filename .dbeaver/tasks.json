@@ -1,0 +1,75 @@
+{
+	"06ce9cb8-97e4-43fc-8aa5-17d45a338b8d": {
+		"task": "dataExport",
+		"label": "Pokemon Export",
+		"description": "",
+		"createTime": "202412192204",
+		"updateTime": "202412192204",
+		"state": {
+			"producers": [
+				{
+					"type": "databaseTransferProducer",
+					"location": {
+						"type": "entity",
+						"project": "New Project",
+						"entityId": "microsoft-193b7e921ad-72d48c58ccd11737/master/dbo/pokemon"
+					}
+				}
+			],
+			"consumers": [
+				{
+					"type": "streamTransferConsumer"
+				}
+			],
+			"configuration": {
+				"maxJobCount": 1,
+				"showFinalMessage": true,
+				"DatabaseTransferProducer": {
+					"extractType": "SINGLE_QUERY",
+					"segmentSize": 100000,
+					"fetchSize": 10000,
+					"openNewConnections": false,
+					"queryRowCount": false,
+					"selectedColumnsOnly": false,
+					"selectedRowsOnly": false
+				},
+				"StreamTransferConsumer": {
+					"lobExtractType": "INLINE",
+					"lobEncoding": "BINARY",
+					"dataFileConflictBehavior": "PATCHNAME",
+					"blobFileConflictBehavior": "PATCHNAME",
+					"outputFolder": "/Users/zachantunes",
+					"outputFilePattern": "${table}_${timestamp}",
+					"outputEncoding": "UTF-8",
+					"outputTimestampPattern": "yyyyMMddHHmm",
+					"outputEncodingBOM": false,
+					"outputClipboard": false,
+					"useSingleFile": false,
+					"compressResults": false,
+					"splitOutFiles": false,
+					"maxOutFileSize": 10000000,
+					"valueFormat": "UI"
+				},
+				"producer": "database_producer",
+				"consumer": "stream_consumer",
+				"processor": "stream.csv",
+				"processors": {
+					"stream_consumer:stream.csv": {
+						"@propNames": "quoteChar,rowDelimiter,extension,headerFormat,delimiter,header,formatNumbers,quoteAlways,headerCase,quoteNever,escape,",
+						"quoteChar": "\"",
+						"rowDelimiter": "default",
+						"extension": "csv",
+						"headerFormat": "label",
+						"delimiter": ",",
+						"header": "top",
+						"formatNumbers": "false",
+						"quoteAlways": "disabled",
+						"headerCase": "as is",
+						"quoteNever": "false",
+						"escape": "quotes"
+					}
+				}
+			}
+		}
+	}
+}
