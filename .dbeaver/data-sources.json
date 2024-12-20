@@ -49,6 +49,7 @@
 			"provider": "postgresql",
 			"driver": "postgres-jdbc",
 			"name": "PostgreSQL@192.168.1.19",
+			"save-password": true,
 			"configuration": {
 				"host": "192.168.1.19",
 				"port": "5432",
