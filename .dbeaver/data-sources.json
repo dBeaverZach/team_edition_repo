@@ -1,0 +1,65 @@
+{
+	"folders": {},
+	"connections": {
+		"microsoft-193b7e921ad-72d48c58ccd11737": {
+			"provider": "sqlserver-ee",
+			"driver": "microsoft",
+			"name": "SQL Server@192.168.1.19",
+			"save-password": true,
+			"configuration": {
+				"host": "192.168.1.19",
+				"port": "1433",
+				"database": "master",
+				"url": "jdbc:sqlserver://;serverName\u003d192.168.1.19;databaseName\u003dmaster",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "sqlserver_database",
+				"bootstrap": {
+					"autocommit": true
+				}
+			}
+		},
+		"mysql8-193e0d213f4-144da3e257729941": {
+			"provider": "mysql-ee",
+			"driver": "mysql8",
+			"name": "MySQL@192.168.1.19",
+			"save-password": true,
+			"configuration": {
+				"host": "192.168.1.19",
+				"port": "3306",
+				"database": "mydb",
+				"url": "jdbc:mysql://192.168.1.19:3306/mydb",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2,TLSv1.3",
+					"allowPublicKeyRetrieval": "true"
+				},
+				"auth-model": "native",
+				"bootstrap": {
+					"autocommit": true
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
