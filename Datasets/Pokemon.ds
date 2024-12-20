@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><dataset draft="false"><queries><query id="0b0103e2-00dc-41b6-919a-f4af24fded5b" data-source="microsoft-193b7e921ad-72d48c58ccd11737" queryText="SELECT * FROM master.dbo.pokemon p" catalog="master" schema="dbo"/></queries></dataset>

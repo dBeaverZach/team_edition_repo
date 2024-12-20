@@ -1,0 +1,1 @@
+SELECT * FROM pokemon p WHERE type1 = 'fire';
