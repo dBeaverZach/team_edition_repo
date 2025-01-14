@@ -63,6 +63,32 @@
 					"autocommit": true
 				}
 			}
+		},
+		"postgres-jdbc-19466d02d31-7841e28e439e1397": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"origin": {
+				"$type": "cloud",
+				"cloud-provider": "aws",
+				"cloud-id": "aws_1",
+				"cloud-zone-id": "eu-central-1",
+				"aws-resource": "arn:aws:rds:eu-central-1:859245062624:db:pg-secret-1"
+			},
+			"name": "PostgreSQL - pg-secret-1 (859245062624)",
+			"save-password": true,
+			"configuration": {
+				"host": "pg-secret-1.cvkeiadhi2qw.eu-central-1.rds.amazonaws.com",
+				"port": "5432",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"properties": {
+					"ssl": "true",
+					"sslmode": "require",
+					"sslpasswordcallback": "org.jkiss.dbeaver.runtime.net.DefaultCallbackHandler"
+				},
+				"auth-model": "iam"
+			}
 		}
 	},
 	"connection-types": {
