@@ -89,6 +89,33 @@
 				},
 				"auth-model": "iam"
 			}
+		},
+		"postgres-jdbc-19466d87db0-4deaa5179a1d6eeb": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"origin": {
+				"$type": "cloud",
+				"cloud-provider": "aws",
+				"cloud-id": "aws_1",
+				"cloud-zone-id": "eu-central-1",
+				"aws-resource": "arn:aws:rds:eu-central-1:859245062624:db:iam1"
+			},
+			"name": "PostgreSQL - iam1 (859245062624)",
+			"save-password": true,
+			"configuration": {
+				"host": "iam1.cvkeiadhi2qw.eu-central-1.rds.amazonaws.com",
+				"port": "5432",
+				"database": "dbeaver",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"properties": {
+					"ssl": "true",
+					"sslmode": "require",
+					"sslpasswordcallback": "org.jkiss.dbeaver.runtime.net.DefaultCallbackHandler"
+				},
+				"auth-model": "iam"
+			}
 		}
 	},
 	"connection-types": {
